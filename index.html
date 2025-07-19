@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I'm Sorry 💔</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #fbd3e9, #bb377d);
+      font-family: 'Pacifico', cursive;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      font-size: 1.5em;
+      max-width: 90%;
+      margin: 0 20px 1em;
+    }
+
+    .heart {
+      width: 100px;
+      height: 90px;
+      position: relative;
+      animation: pulse 1s infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 150px;
+      background: red;
+      border-radius: 50px 50px 0 0;
+      top: 0;
+      left: 50px;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+
+    .heart::after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    button {
+      margin-top: 20px;
+      background: white;
+      color: #bb377d;
+      font-family: 'Pacifico', cursive;
+      font-size: 1.2em;
+      padding: 10px 25px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #ffe4f0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="heart"></div>
+  <h1>I'm Really Sorry 😔</h1>
+  <p>I know I messed up and I hurt you. Please forgive me.<br>You mean the world to me. 💖</p>
+  <button onclick="alert('I promise to be better. Can we talk? 💌')">Forgive Me?</button>
+
+</body>
+</html>
